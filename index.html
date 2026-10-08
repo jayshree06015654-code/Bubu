@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Bubuuu</title>
+<title>For Bubuuu ♡</title>
 
 <style>
 * {
@@ -11,9 +11,13 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background: #fff7fb;
+  font-family: Arial, sans-serif;
   color: #4b3040;
+}
+
+input {
+  display: none;
 }
 
 .page {
@@ -21,28 +25,30 @@ body {
   min-height: 100vh;
   padding: 30px 20px;
   text-align: center;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#page1 {
+#p1 {
   display: flex;
 }
 
-#page2:target,
-#page3:target {
+#next1:checked ~ #p1 {
+  display: none;
+}
+
+#next1:checked ~ #p2 {
   display: flex;
 }
 
-#page2:target ~ #page1,
-#page3:target ~ #page1 {
+#next2:checked ~ #p1,
+#next2:checked ~ #p2 {
   display: none;
 }
 
-#page2:target ~ #page2,
-#page3:target ~ #page2 {
-  display: none;
+#next2:checked ~ #p3 {
+  display: flex;
 }
 
 .photo {
@@ -50,29 +56,26 @@ body {
   max-width: 90%;
   border-radius: 25px;
   margin-bottom: 25px;
-  box-shadow: 0 8px 25px rgba(100,50,80,0.2);
+  box-shadow: 0 8px 25px rgba(100,50,80,.2);
 }
 
 h1 {
   font-size: 27px;
 }
 
-button {
-  border: none;
+.btn {
+  display: inline-block;
   background: #d98caf;
   color: white;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 30px;
   font-size: 16px;
   margin-top: 20px;
-}
-
-a {
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .roses {
-  font-size: 100px;
+  font-size: 110px;
   margin-bottom: 20px;
 }
 
@@ -83,53 +86,56 @@ a {
   max-width: 390px;
   line-height: 1.7;
   text-align: left;
-  box-shadow: 0 5px 25px rgba(100,50,80,0.15);
+  box-shadow: 0 5px 25px rgba(100,50,80,.15);
 }
 
 .final {
   text-align: center;
   font-weight: bold;
-  margin-top: 25px;
   font-size: 20px;
+  margin-top: 25px;
 }
 </style>
 </head>
 
 <body>
 
+<input type="radio" name="page" id="next1">
+<input type="radio" name="page" id="next2">
+
 <!-- PAGE 1 -->
 
-<div class="page" id="page1">
+<div class="page" id="p1">
 
 <img src="IMG_20261008_123544_256.jpg" class="photo">
 
 <h1>r u stresseddd bubuu? 🥺</h1>
 
-<a href="#page2">
-<button>come here bubuuu ♡</button>
-</a>
+<label for="next1" class="btn">
+come here bubuuu ♡
+</label>
 
 </div>
 
 
 <!-- PAGE 2 -->
 
-<div class="page" id="page2">
+<div class="page" id="p2">
 
 <div class="roses">💐</div>
 
 <h1>don't be stresseddd bubuuu ♡</h1>
 
-<a href="#page3">
-<button>one more thing...</button>
-</a>
+<label for="next2" class="btn">
+one more thing...
+</label>
 
 </div>
 
 
 <!-- PAGE 3 -->
 
-<div class="page" id="page3">
+<div class="page" id="p3">
 
 <div class="letter">
 
