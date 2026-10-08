@@ -1,1 +1,188 @@
-<img src="IMG_20261008_123544_256.jpg" class="photo">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Bubuuu ♡</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff7fb;
+  color: #4b3040;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 35px 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade 0.5s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* PAGE 1 */
+
+.photo {
+  width: 280px;
+  max-width: 85%;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(100,50,80,0.2);
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 5px 0 25px;
+}
+
+button {
+  border: none;
+  background: #d98caf;
+  color: white;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(150,70,100,0.2);
+}
+
+/* PAGE 2 */
+
+.roses {
+  position: relative;
+  width: 250px;
+  height: 280px;
+  margin-bottom: 25px;
+}
+
+.flower {
+  position: absolute;
+  font-size: 65px;
+  filter: grayscale(1) brightness(1.8);
+}
+
+.f1 { left: 20px; top: 60px; }
+.f2 { left: 80px; top: 20px; }
+.f3 { left: 140px; top: 60px; }
+.f4 { left: 55px; top: 110px; }
+.f5 { left: 115px; top: 110px; }
+
+.stem {
+  position: absolute;
+  width: 4px;
+  height: 130px;
+  background: #78936b;
+  left: 123px;
+  top: 120px;
+  transform: rotate(-5deg);
+}
+
+.ribbon {
+  position: absolute;
+  bottom: 5px;
+  left: 105px;
+  font-size: 45px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* PAGE 3 */
+
+.letter {
+  background: white;
+  width: 100%;
+  max-width: 390px;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding: 30px 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px rgba(100,50,80,0.15);
+  text-align: left;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.letter-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.final {
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 25px;
+}
+
+.next {
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+
+  <img src="IMG_20261008_123544_256.jpg" class="photo">
+
+  <h1>r u stresseddd bubuu? 🥺</h1>
+
+  <button onclick="nextPage(2)">
+    come here bubuuu ♡
+  </button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+
+  <div class="roses">
+
+    <div class="flower f1">❀</div>
+    <div class="flower f2">❀</div>
+    <div class="flower f3">❀</div>
+    <div class="flower f4">❀</div>
+    <div class="flower f5">❀</div>
+
+    <div class="stem"></div>
+
+    <div class="ribbon">🎀</div>
+
+  </div>
+
+  <div class="subtitle">
+    don't be stressed
